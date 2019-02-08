@@ -1,5 +1,6 @@
 // const <Name of Function to Test> = require('./fileName');
-const isNotDefined = require('./var');
+const varFuncs = require('./var');
+isNotDefined = varFuncs.isNotDefined;
 
 /*
 test('Test Name/Description', () =>
@@ -8,6 +9,8 @@ test('Test Name/Description', () =>
 	Analyze the result of the function to determine if it performed as expected
 });
 */
+
+isNotDefined('Defined');
 
 test('isNotDefined, single null/undefuined arguement', () =>
 {
@@ -142,7 +145,7 @@ test('isNotDefined, Multiple defined variable arguement. Only first arguement as
 	expect(isNotDefined(intNeg, float5, int0, int5)).toBe(false);
 
 	// Chars and Strings.
-	expect(isNotDefined(emptyChar, aString, emptyString, aChar)).toBe(true);
+	expect(isNotDefined(emptyChar, aString, emptyString, aChar)).toBe(false);
 	expect(isNotDefined(aString, emptyChar, aChar, emptyString)).toBe(false);
 });
 
@@ -171,3 +174,6 @@ test('isNotDefined, Mulitple arguement defined and undefined variables. Only fir
 	expect(isNotDefined(undefinedVariable, definedVariable)).toBe(true);
 	expect(isNotDefined(definedVariable, undefinedVariable)).toBe(false);
 });
+
+
+/**/

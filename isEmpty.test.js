@@ -1,5 +1,6 @@
 // const <Name of Function to Test> = require('./fileName');
-const isEmpty = require('./var');
+const varFuncs = require('./var');
+isEmpty = varFuncs.isEmpty;
 
 /*
 test('Test Name/Description', () =>
@@ -171,3 +172,6 @@ test('isEmpty, Mulitple arguement defined and undefined variables. Only first ar
 	expect(isEmpty(undefinedVariable, definedVariable)).toBe(true);
 	expect(isEmpty(definedVariable, undefinedVariable)).toBe(false);
 });
+
+
+/**/
