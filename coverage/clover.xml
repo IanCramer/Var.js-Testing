@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1549661098474" clover="3.2.0">
+  <project timestamp="1549661098474" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4" elements="13" coveredelements="13" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="var.js" path="C:\Users\Kenneth\Desktop\Ian\Work\Prismo\var.js-testing\var.js">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <line num="7" count="99" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="49" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="13" count="50" type="stmt"/>
+      <line num="14" count="49" type="stmt"/>
+    </file>
+  </project>
+</coverage>
