@@ -36,14 +36,14 @@ test('isNotDefined, single defined/value/literal arguement', () =>
 	expect(isNotDefined(false)).toBe(false);
 
 	// Numbers
-	expect(isNotDefined(0)).toBe(false); // Int 0
-	expect(isNotDefined(3)).toBe(false); // Int
-	expect(isNotDefined(3.5)).toBe(false); // Float
-	expect(isNotDefined(-3)).toBe(false); // Negative
+	expect(isNotDefined(0)).toBe(false);
+	expect(isNotDefined(3)).toBe(false);
+	expect(isNotDefined(3.5)).toBe(false);
+	expect(isNotDefined(-3)).toBe(false);
 
 	// Chars and Strings.
-	expect(isNotDefined('')).toBe(true); // Empty String is interpreted as Undefined
-	expect(isNotDefined("")).toBe(true); // Empty String is interpreted as Undefined
+	expect(isNotDefined('')).toBe(false); // Empty String is interpreted as Undefined
+	expect(isNotDefined("")).toBe(false); // Empty String is interpreted as Undefined
 	expect(isNotDefined('c')).toBe(false);
 	expect(isNotDefined("a string")).toBe(false);
 });
@@ -70,14 +70,14 @@ test('isNotDefined, single defined variable arguement', () =>
 	expect(isNotDefined(boolFalse)).toBe(false);
 
 	// Numbers
-	expect(isNotDefined(int0)).toBe(false); // Int 0
-	expect(isNotDefined(int5)).toBe(false); // Int
-	expect(isNotDefined(intNeg)).toBe(false); // Float
-	expect(isNotDefined(float5)).toBe(false); // Negative
+	expect(isNotDefined(int0)).toBe(false);
+	expect(isNotDefined(int5)).toBe(false);
+	expect(isNotDefined(intNeg)).toBe(false);
+	expect(isNotDefined(float5)).toBe(false);
 
 	// Chars and Strings.
-	expect(isNotDefined(emptyChar)).toBe(true); // Empty String is interpreted as Undefined
-	expect(isNotDefined(emptyString)).toBe(true); // Empty String is interpreted as Undefined
+	expect(isNotDefined(emptyChar)).toBe(false); // Empty String is interpreted as Undefined
+	expect(isNotDefined(emptyString)).toBe(false); // Empty String is interpreted as Undefined
 	expect(isNotDefined(aChar)).toBe(false);
 	expect(isNotDefined(aString)).toBe(false);
 });
@@ -113,7 +113,7 @@ test('isNotDefined, Multiple Defined/Value/literal arguement. Only first argueme
 
 	// Chars and Strings. First arguement is assessed, all others ignored
 	expect(isNotDefined("a string", 'c', "Another string", '', "")).toBe(false);
-	expect(isNotDefined('', "", "started with an empty string")).toBe(true);  // Empty String is interpreted as Undefined
+	expect(isNotDefined('', "", "started with an empty string")).toBe(false);  // Empty String is interpreted as Undefined
 });
 
 test('isNotDefined, Multiple defined variable arguement. Only first arguement asses, all others ignored.', () =>

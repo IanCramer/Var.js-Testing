@@ -5,3 +5,5 @@ module.exports = isNotDefined;
 // Returns true if given null, undefined or empty string.
 /*export*/ const isEmpty = x => isNotDefined(x) || (x === '');
 module.exports = isEmpty;
+
+

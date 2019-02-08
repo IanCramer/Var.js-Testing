@@ -36,14 +36,14 @@ test('isEmpty, single defined/value/literal arguement', () =>
 	expect(isEmpty(false)).toBe(false);
 
 	// Numbers
-	expect(isEmpty(0)).toBe(false); // Int 0
-	expect(isEmpty(3)).toBe(false); // Int
-	expect(isEmpty(3.5)).toBe(false); // Float
-	expect(isEmpty(-3)).toBe(false); // Negative
+	expect(isEmpty(0)).toBe(false);
+	expect(isEmpty(3)).toBe(false);
+	expect(isEmpty(3.5)).toBe(false);
+	expect(isEmpty(-3)).toBe(false);
 
 	// Chars and Strings.
-	expect(isEmpty('')).toBe(true); // Empty String is interpreted as Undefined
-	expect(isEmpty("")).toBe(true); // Empty String is interpreted as Undefined
+	expect(isEmpty('')).toBe(true); // Empty Char is empty
+	expect(isEmpty("")).toBe(true); // Empty String is empty
 	expect(isEmpty('c')).toBe(false);
 	expect(isEmpty("a string")).toBe(false);
 });
@@ -70,14 +70,14 @@ test('isEmpty, single defined variable arguement', () =>
 	expect(isEmpty(boolFalse)).toBe(false);
 
 	// Numbers
-	expect(isEmpty(int0)).toBe(false); // Int 0
-	expect(isEmpty(int5)).toBe(false); // Int
-	expect(isEmpty(intNeg)).toBe(false); // Float
-	expect(isEmpty(float5)).toBe(false); // Negative
+	expect(isEmpty(int0)).toBe(false);
+	expect(isEmpty(int5)).toBe(false);
+	expect(isEmpty(intNeg)).toBe(false);
+	expect(isEmpty(float5)).toBe(false);
 
 	// Chars and Strings.
-	expect(isEmpty(emptyChar)).toBe(true); // Empty String is interpreted as Undefined
-	expect(isEmpty(emptyString)).toBe(true); // Empty String is interpreted as Undefined
+	expect(isEmpty(emptyChar)).toBe(true); // Empty String is empty -> true
+	expect(isEmpty(emptyString)).toBe(true); // Empty String is empty -> true
 	expect(isEmpty(aChar)).toBe(false);
 	expect(isEmpty(aString)).toBe(false);
 });
@@ -113,7 +113,7 @@ test('isEmpty, Multiple Defined/Value/literal arguement. Only first arguement as
 
 	// Chars and Strings. First arguement is assessed, all others ignored
 	expect(isEmpty("a string", 'c', "Another string", '', "")).toBe(false);
-	expect(isEmpty('', "", "started with an empty string")).toBe(true);  // Empty String is interpreted as Undefined
+	expect(isEmpty('', "", "started with an empty string")).toBe(true);  // Empty String is empty -> true
 });
 
 test('isEmpty, Multiple defined variable arguement. Only first arguement asses, all others ignored.', () =>
